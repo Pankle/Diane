@@ -23,7 +23,7 @@ public class RedisSimpleUtil {
     private void init()  {
 
         JedisPoolConfig jedisPoolConfig = generateRedisConfig();
-        String[] strings = "10.108.6.181:7000,10.108.6.181:7001,10.108.6.182:7002,10.108.6.182:7003,10.108.6.183:7004,10.108.6.183:7005".split(",");
+        String[] strings = "hostname:7000,hostname:7001,hostname:7002".split(",");
         HashSet<String> hashSet = new HashSet<String>(strings.length);
         for (String string : strings) {
             hashSet.add(string.trim());
