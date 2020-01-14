@@ -41,7 +41,7 @@ public class PollingBulkProcessor {
     }
 
     public PollingBulkProcessor() {
-        client = ESUtil.initClient("10.108.142.68", 9200, "elastic", "abcd+1234");
+        client = ESUtil.initClient("hostname", 9200, "elastic", "abcd+1234");
     }
 
 
