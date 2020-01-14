@@ -22,7 +22,7 @@ public class PollingBulkProcessor {
     }
 
     public  List query(String indexname, String type, String field, String filedtype,String cookid,String userid) throws ParseException {
-        //保存登录的用户和cookid，又来防止横向越权操作
+        //保存登录的用户和cookid，用来防止横向越权操作
         jedisCluster.set(cookid.toString(), userid.toString());
         jedisCluster.expire(cookid.toString(),1800);
         List query = EsQeury.query(jedisCluster,client, indexname, type, field, filedtype);
